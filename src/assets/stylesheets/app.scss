@@ -1,0 +1,25 @@
+* {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: transparent;
+	font-family: 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica,
+		'PingFang SC', 'Hiragino Sans GB', Arial, sans-serif;
+}
+
+body {
+	overflow: hidden;
+	background-color: #041228;
+}
+
+p,
+ul,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+a,
+span {
+	text-decoration: none;
+}

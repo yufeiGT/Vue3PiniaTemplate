@@ -1,0 +1,80 @@
+$innerWidth: 1920px;
+$innerHeight: 1080px;
+$fontSize: 16px;
+
+@function _rem($px) {
+	@return calc($px / $fontSize) * 1rem;
+}
+
+@function px_2_vw($px) {
+	@return calc($px * 100vw / $innerWidth);
+}
+
+@function px_2_vh($px) {
+	@return calc($px * 100vh / $innerHeight);
+}
+
+$spacing: _rem(20px);
+
+$primaryColor: #041c47;
+$backgroundColor: #132d51;
+$brightColor: #09296d;
+$highColor: #2751ab;
+$highGlossColor: #4680ff;
+$successColor: #02b302;
+$dangerColor: #a61d24;
+$borderColor: #132d51;
+
+$borderRadius: 4px;
+$headerHeight: 55px;
+
+:export {
+	spacing: $spacing;
+
+	primaryColor: $primaryColor;
+	backgroundColor: $backgroundColor;
+	brightColor: $brightColor;
+	highColor: $highColor;
+	highGlossColor: $highGlossColor;
+	successColor: $successColor;
+	borderColor: $borderColor;
+
+	borderRadius: $borderRadius;
+	headerHeight: $headerHeight;
+}
+
+html {
+	font-size: $fontSize;
+	color: #fff;
+}
+
+@media screen and (max-width: 1920px) {
+	html {
+		font-size: 14px !important;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	html {
+		font-size: 12px !important;
+	}
+}
+
+@media screen and (max-height: 1070px) {
+	html {
+		font-size: 12px !important;
+	}
+}
+
+::-webkit-scrollbar {
+	background-color: transparent;
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(143, 146, 153, 0.5);
+	width: 8px;
+	height: 8px;
+	border-radius: $borderRadius;
+}
