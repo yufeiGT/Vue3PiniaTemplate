@@ -1,15 +1,17 @@
-import { Launcher } from '@~crazy/launcher';
+import { Launcher } from '@gluttons/launcher';
 
 import * as Entity from '@/entity';
 
-import { launcher } from '../launcher';
+import { ResponseExtra, launcher } from '../launcher';
 
 /**
  * 登录
  * @param params
  */
 export function Login(params: Entity.User.UserInfo.RequestParams) {
-	return new Promise<Launcher.Response<Entity.User.UserInfo>>((resolve) => {
+	return new Promise<
+		Launcher.ResponseInit<Entity.User.UserInfo> & ResponseExtra
+	>((resolve) => {
 		resolve({
 			data: {
 				id: 1,

@@ -48,10 +48,7 @@ module.exports = {
 		historyApiFallback: true,
 		allowedHosts: 'all',
 		client: {
-			overlay: {
-				errors: true,
-				warnings: false,
-			},
+			overlay: false,
 		},
 		proxy: {
 			'/api': {

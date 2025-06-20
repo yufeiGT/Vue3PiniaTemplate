@@ -2,7 +2,7 @@ import { onBeforeUnmount, ref } from 'vue';
 import { onBeforeRouteLeave } from 'vue-router';
 import { TableColumnProps } from 'ant-design-vue';
 import { Condition, Requester, Clock } from '@gluttons/es-tools';
-import { Launcher } from '@~crazy/launcher';
+import { Launcher } from '@gluttons/launcher';
 
 import * as API from '@/api';
 import * as Entity from '@/entity';
@@ -11,14 +11,14 @@ export function use() {
 	const condition = Condition.useRoute({
 		page: 1,
 		pageSize: 10,
-	} as Launcher.Pagination.Params);
+	} as Launcher.PaginationParams);
 	return {
 		condition,
 	};
 }
 
 export function useTableData(
-	condition: Condition.ConditionRoute<Launcher.Pagination.Params>
+	condition: Condition.ConditionRoute<Launcher.PaginationParams>
 ) {
 	const { isRequesting, reset, send } = Requester.use();
 

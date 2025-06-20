@@ -5,7 +5,6 @@
 -   支持 Sass
 -   集成 TypeScript
 -   集成 Ant Design Vue
--   集成 @~crazy 工具包
 -   集成 @gluttons 工具包
 
 #### 确保已经全局安装 Vue CLI 5 和 Webpack
@@ -61,7 +60,7 @@
         <tr>
             <td>launcher.ts</td>
             <td>-</td>
-            <td>@~crazy/launcher 实例</td>
+            <td>@gluttons/launcher 实例</td>
         </tr>
         <tr>
             <td rowspan=4>assets</td>
