@@ -16,28 +16,11 @@ $fontSize: 16px;
 
 $spacing: _rem(20px);
 
-$primaryColor: #041c47;
-$backgroundColor: #132d51;
-$brightColor: #09296d;
-$highColor: #2751ab;
-$highGlossColor: #4680ff;
-$successColor: #02b302;
-$dangerColor: #a61d24;
-$borderColor: #132d51;
-
 $borderRadius: 4px;
 $headerHeight: 55px;
 
 :export {
 	spacing: $spacing;
-
-	primaryColor: $primaryColor;
-	backgroundColor: $backgroundColor;
-	brightColor: $brightColor;
-	highColor: $highColor;
-	highGlossColor: $highGlossColor;
-	successColor: $successColor;
-	borderColor: $borderColor;
 
 	borderRadius: $borderRadius;
 	headerHeight: $headerHeight;
@@ -54,13 +37,13 @@ html {
 	}
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1700px) {
 	html {
-		font-size: 12px !important;
+		font-size: 13px !important;
 	}
 }
 
-@media screen and (max-height: 1070px) {
+@media screen and (max-width: 1400px) {
 	html {
 		font-size: 12px !important;
 	}
