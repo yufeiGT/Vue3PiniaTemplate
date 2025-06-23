@@ -209,7 +209,7 @@
 ```JavaScript
 // 外部包
 import { ref, computed } from 'vue';
-import * as KotronGlobal from '@gluttons/es-tools';
+import * as EsTools from '@gluttons/es-tools';
 
 // @ 的 interface、enum、type 等
 import * as Entity from '@/entity';
