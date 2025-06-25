@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"@ant-design/icons-vue": "7.0.1",
-		"@gluttons/es-tools": "0.0.6",
+		"@gluttons/es-tools": "0.1.0",
 		"@gluttons/fortress-ui": "0.2.2",
 		"@gluttons/launcher": "0.0.2",
 		"@gluttons/spanner": "0.1.0",
