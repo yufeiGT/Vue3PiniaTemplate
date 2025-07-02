@@ -24,7 +24,7 @@
 
 -   制定人：GT
 -   制定日期：2024 年 1 月 6 日
--   修改日期：2024 年 6 月 4 日
+-   修改日期：2024 年 5 月 4 日
 -   联系邮箱：769416198@qq.com
 
 ---
@@ -60,7 +60,7 @@
         <tr>
             <td>launcher.ts</td>
             <td>-</td>
-            <td>@gluttons/launcher 实例</td>
+            <td>@~crazy/launcher 实例</td>
         </tr>
         <tr>
             <td rowspan=4>assets</td>
@@ -225,7 +225,7 @@ import HeaderVue from '@/components/header.vue';
 import { useQuery } from './use';
 
 // 内部组件
-import TestVue from 'test.vue';
+import TestVue from './test.vue';
 ```
 
 ---
@@ -407,9 +407,10 @@ export function GetUserInfo() {
 
 ```JavaScript
 export function Login(){
-    return launcher.get<Entity.Auth.UserInfo, undefined>('xxxx', {}, {
+    const defaultResponse = Entity.Auth.UserInfo.getDefault();
+    return launcher.get<typeof defaultResponse, undefined>('xxxx', {}, {
         // 设定默认值
-		defaultResponse: Entity.Auth.UserInfo.getDefault(),
+		defaultResponse,
     });
 }
 ```
@@ -419,11 +420,12 @@ export function Login(){
 ```JavaScript
 // api/lib/auth.ts
 export function Login(params: Entity.Auth.UserInfo.RequestParams) {
+    const defaultResponse = Entity.Auth.UserInfo.getDefault();
     return launcher.post<
-		Entity.Auth.UserInfo,
-		Entity.Auth.UserInfo.RequestParams
+		typeof defaultResponse,
+		typeof params
 	>('xxxx', params, {
-		defaultResponse: Entity.Auth.UserInfo.getDefault(),
+		defaultResponse,
 	});
 }
 
