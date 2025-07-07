@@ -1,20 +1,32 @@
 <template>
-	<svg
-		class="svg-icon"
-		:class="className"
-		aria-hidden="true"
+	<Flex
+		vert
+		auto
+		align="center"
 		:style="{
 			width,
 			height,
+			overflow: 'hidden !important',
+			color,
 		}"
 	>
-		<use :xlink:href="`#icon-${icon}`" />
-	</svg>
+		<svg
+			class="svg-icon"
+			:class="className"
+			aria-hidden="true"
+			:style="{
+				width,
+				height,
+			}"
+		>
+			<use :xlink:href="`#icon-${icon}`" />
+		</svg>
+	</Flex>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { CssUnits } from '@gluttons/fortress-ui';
+import { Flex, CssUnits } from '@gluttons/fortress-ui';
 
 const props = withDefaults(
 	defineProps<{
@@ -23,9 +35,11 @@ const props = withDefaults(
 		size?: string | number;
 		width?: string | number;
 		height?: string | number;
+		color?: string;
 	}>(),
 	{
 		size: 20,
+		color: 'inherit',
 	}
 );
 

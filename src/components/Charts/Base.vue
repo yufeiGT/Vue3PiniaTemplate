@@ -1,12 +1,14 @@
 <template>
-	<div class="charts-container" ref="echartsContainer"></div>
+	<div class="charts-container">
+		<div class="charts-inner" ref="echartsContainer"></div>
+	</div>
 </template>
 
 <script lang="ts" setup>
 import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
-import elementResizeDetectorMaker from 'element-resize-detector';
+import * as elementResizeDetectorMaker from 'element-resize-detector';
 import * as Spanner from '@gluttons/spanner';
 
 const erd = elementResizeDetectorMaker({
@@ -109,5 +111,13 @@ onBeforeUnmount(() => {
 	overflow: hidden;
 	width: 100% !important;
 	height: 100% !important;
+	position: relative;
+
+	.charts-inner {
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
 }
 </style>
